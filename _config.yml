@@ -115,9 +115,8 @@ analytics:
 author:
   name: "허진경"
   avatar: "/assets/images/github-profile.jpg" # 프로필 사진
-  bio: "신입 백엔드 개발자 | 문제 해결과 성장에 집중합니다."
+  bio: "문제 해결과 성장에 집중합니다."
   location: "대한민국"
-  email: "jin8073@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
