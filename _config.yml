@@ -113,30 +113,21 @@ analytics:
 
 # Site Author
 author:
-  name             : "허진경"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            : "jin8073@gmail.com"
+  name: "허진경"
+  avatar: "/assets/images/github-profile.jpg" # 프로필 사진
+  bio: "신입 백엔드 개발자 | 문제 해결과 성장에 집중합니다."
+  location: "대한민국"
+  email: "jin8073@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:jin8073@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "mailto:jin8073@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/jinnk0"
+    - label: "Blog"
+      icon: "fas fa-fw fa-link"
+      url: "https://velog.io/@slow_runner"  # 블로그 주소 실제 URL로 변경
 
 # Site Footer
 footer:
