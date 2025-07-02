@@ -17,8 +17,29 @@
 
 <section id="experience">
   <h4>Experience</h4>
-  <p>경험 내용을 여기에 작성하세요.</p>
+  <div class="project-grid">
+    
+    <a href="/projects/tune-your-shop" class="project-card" target="_blank">
+      <img src="/assets/images/tune-your-shop.jpg" alt="Tune Your Shop">
+      <div class="project-info">
+        <h5>Tune Your Shop</h5>
+        <p>자영업자를 위한 음악 큐레이션 서비스. FastAPI, GCP 등을 활용해 성능 최적화와 사용자 맞춤형 추천 기능 구현.</p>
+      </div>
+    </a>
+
+    <a href="/projects/campssg" class="project-card" target="_blank">
+      <img src="/assets/images/campssg.jpg" alt="CampSsg">
+      <div class="project-info">
+        <h5>CampSsg</h5>
+        <p>캠핑 장비 픽업 서비스. SpringBoot와 AWS 기반으로 팀 리딩 및 전체 시스템 아키텍처 구성 주도.</p>
+      </div>
+    </a>
+
+    <!-- 다른 프로젝트도 같은 방식으로 추가 -->
+    
+  </div>
 </section>
+
 
 <section id="education">
   <h4>Education</h4>
@@ -66,6 +87,53 @@
   }
 </style>
 
+<style>
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .project-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: #f9f9f9;
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .project-card:hover {
+    background: #f0faff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .project-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .project-info h5 {
+    margin: 0 0 0.2rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .project-info p {
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 1.4;
+    color: #333;
+  }
+</style>
 
 
 
