@@ -121,7 +121,14 @@
 
 <section id="education">
   <h4>Education</h4>
-  <p>학력 내용을 여기에 작성하세요.</p>
+  <div class="resume-item">
+    <div class="resume-item-text">
+      인천대학교, 컴퓨터공학부 (졸업)
+    </div>
+    <div class="resume-item-date">
+      2018년 3월 – 2023년 8월
+    </div>
+  </div>
 </section>
 
 <section id="certificate">
@@ -241,6 +248,25 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin: 1.2rem 0 0.4rem;
+  }
+
+  .resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resume-item-text {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .resume-item-date {
+    font-size: 0.6rem;
+    color: #666;
+    white-space: nowrap;
   }
 
 
