@@ -1,11 +1,9 @@
 ---
-title: "Tune Your Shop"
+title: "자영업자들을 위한 음악 큐레이션 서비스: Tune Your Shop"
 permalink: /projects/tune-your-shop/
 layout: single
 classes: wide
 author_profile: false
-read_time: true
-share: true
 related: true
 ---
 
