@@ -1,8 +1,10 @@
-.page__content {
-  font-size: 0.9rem;
+.single h2 {
+  font-size: 28px; // h2 크기 조절
+  font-weight: 700;
+}
+
+.single .content {
+  font-size: 16px; // 내용 크기 조절
   line-height: 1.6;
 }
 
-.page__content h2 {
-  font-size: 1.4rem;
-}
