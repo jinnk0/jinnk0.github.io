@@ -13,3 +13,10 @@ article.page .page__content ul {
   line-height: 1.5;
   margin-left: 0.6em; // 들여쓰기 조절 가능
 }
+
+.sidebar__right.sticky {
+  position: sticky;
+  top: 4rem;
+  z-index: 10; 
+  background-color: #fff;
+}
