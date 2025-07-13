@@ -1,12 +1,9 @@
-.page__content {
-  h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 1.2em;
-  }
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
+.page__content h2 {
+  font-size: 28px !important;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f2f3f3;
 }
 
+.page__content p {
+  font-size: 16px !important;
+}
