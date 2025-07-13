@@ -1,0 +1,25 @@
+---
+title: "Tune Your Shop"
+permalink: /projects/tune-your-shop/
+layout: single
+classes: wide
+author_profile: false
+read_time: true
+share: true
+related: true
+---
+
+## 프로젝트 개요
+
+자영업자의 매장 분위기에 맞는 음악을 추천해주는 서비스입니다. (…)
+
+## 주요 기능
+
+- 분위기 기반 음악 추천
+- 선곡 저장 및 즐겨찾기 (…)
+
+## 본인의 기여
+
+응답 속도 950ms → 200ms (79% 단축)
+
+(이하 생략)
