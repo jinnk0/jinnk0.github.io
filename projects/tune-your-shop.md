@@ -5,8 +5,6 @@ layout: single
 classes: wide
 author_profile: false
 related: true
-toc: true
-toc_sticky: true
 ---
 <img src="/assets/images/tune-your-shop.png"
      alt="Tune Your Shop"
