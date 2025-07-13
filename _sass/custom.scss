@@ -1,9 +1,15 @@
-.page__content h2 {
-  font-size: 28px !important;
+article.page .page__content > h2 {
+  font-size: 26px;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #f2f3f3;
 }
 
-.page__content p {
-  font-size: 16px !important;
+article.page .page__content > p {
+  font-size: 16px;
+}
+
+article.page .page__content ul {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 1.2em; // 들여쓰기 조절 가능
 }
