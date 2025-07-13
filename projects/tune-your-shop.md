@@ -1,10 +1,12 @@
 ---
 title: "자영업자들을 위한 음악 큐레이션 서비스: Tune Your Shop"
+banner_image: /assets/images/tune-your-shop.png
 permalink: /projects/tune-your-shop/
 layout: single
 classes: wide
 author_profile: false
 related: true
+toc: true
 ---
 
 ## 프로젝트 개요
