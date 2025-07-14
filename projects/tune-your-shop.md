@@ -18,18 +18,19 @@ related: true
 AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화하고, 고객 경험과 매출 향상에 기여하는 음악 큐레이션 서비스 개발
 #### 프로젝트 배경
 - 기업 해커톤 주제인 AGI for work에 맞춰, 실생활에서 접하기 쉽고 누구나 공감가능한 주제로 ‘음악’과 ‘업무 효율화’를 결합
-<div style="display: flex; justify-content: space-between; text-align: center; gap: 20px;">
-  <div style="flex: 1;">
-    <h4 style="margin-bottom: 8px;">연구결과</h4>
-    <img src="/assets/images/tune-your-shop_graph.png" alt="이미지1" style="width: 100%; max-width: 100%;">
-    <p style="margin-top: 8px;">매장 분위기에 어울리는 음악은 매출 증가에 기여, 반면 부적절한 음악은 매출을 떨어뜨림</p>
+<div class="row">
+  <div class="col-6">
+    <h3>연구결과</h3>
+    <img src="/assets/images/tune-your-shop_graph.png" alt="연구결과 이미지" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <p>매장 분위기에 어울리는 음악은 매출 증가에 기여, 반면 부적절한 음악은 매출을 떨어뜨림</p>
   </div>
-  <div style="flex: 1;">
-    <h4 style="margin-bottom: 8px;">기존 서비스 특징</h4>
-    <img src="/assets/images/tune-your-shop_graph2.png" alt="이미지2" style="width: 100%; max-width: 100%;">
-    <p style="margin-top: 8px;">기존 큐레이션 서비스는 대형 매장 중심, 소상공인은 시간·비용 제약으로 적절한 음악 선곡이 어려움</p>
+  <div class="col-6">
+    <h3>기존 서비스 특징</h3>
+    <img src="/assets/images/tune-your-shop_graph2.png" alt="기존 서비스 이미지" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    <p>기존 큐레이션 서비스는 대형 매장 중심, 소상공인은 시간·비용 제약으로 적절한 음악 선곡이 어려움</p>
   </div>
 </div>
+
 
 
 - 
