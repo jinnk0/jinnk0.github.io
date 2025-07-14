@@ -55,105 +55,157 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ## 주요 기능 상세 설명
 
-<div style="display: flex; align-items: flex-start; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
-  <!-- 이미지 -->
+<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
-    <img src="/assets/images/tune-your-shop_function_login.png" alt="Spotify OAuth 로그인 기능" style="width: 100%; height: auto;">
+    <img src="/assets/images/tune-your-shop_function_login.png" alt="Spotify OAuth 로그인" style="width: 100%; height: auto;">
   </div>
 
-  <!-- 텍스트 -->
-  <div style="flex: 1;">
-    <h4 style="margin-top: 0;">기능 1. 사용자 로그인 (Spotify OAuth 연동)</h4>
+  <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <h4 style="margin-top: 0;">기능 1. 사용자 로그인 (Spotify OAuth 연동)</h4>
 
-    <ul>
-      <li><strong>기획 의도 및 구현 방법</strong>
-        <ul>
-          <li>Spotify OAuth 인증 방식을 사용하여 사용자 로그인 구현</li>
-          <li>자체 회원 시스템 없이 Spotify 계정을 통해 로그인하여 진입 장벽을 낮춤</li>
-        </ul>
-      </li>
-      <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
-        <ul>
-          <li><code>GET /login</code> : Spotify 인증 페이지로 리디렉션</li>
-          <li><code>GET /callback</code> : 로그인 후 redirect된 요청에서 사용자 토큰 및 정보 저장</li>
-        </ul>
-      </li>
-      <li><strong>기능 구현 과정에서 고려한 점</strong>
-        <ul>
-          <li>이후 기능인 플레이리스트 조회 및 음악 추가를 위해 Spotify API 연동이 필수</li>
-          <li>OAuth 인증 플로우의 자연스러운 UX를 위해 redirect 흐름을 부드럽게 구성</li>
-        </ul>
-      </li>
-      <li><strong>기능 적용 후 기대 효과</strong>
-        <ul>
-          <li>Spotify API를 통한 다양한 기능 확장 가능</li>
-          <li>별도 회원가입 없이 곡 추천, 플레이리스트 연동 등 고급 기능을 바로 사용 가능</li>
-        </ul>
-      </li>
-    </ul>
+      <ul>
+        <li><strong>기획 의도 및 구현 방법</strong>
+          <ul>
+            <li>Spotify OAuth 인증 방식을 사용하여 사용자 로그인 구현</li>
+            <li>자체 회원 시스템 없이 Spotify 계정을 통해 로그인하여 진입 장벽을 낮춤</li>
+          </ul>
+        </li>
+        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+          <ul>
+            <li><code>GET /login</code> : Spotify 인증 페이지로 리디렉션</li>
+            <li><code>GET /callback</code> : 로그인 후 redirect된 요청에서 사용자 토큰 및 정보 저장</li>
+          </ul>
+        </li>
+        <li><strong>기능 구현 과정에서 고려한 점</strong>
+          <ul>
+            <li>이후 기능인 플레이리스트 조회 및 음악 추가를 위해 Spotify API 연동이 필수</li>
+            <li>OAuth 인증 플로우의 자연스러운 UX를 위해 redirect 흐름을 부드럽게 구성</li>
+          </ul>
+        </li>
+        <li><strong>기능 적용 후 기대 효과</strong>
+          <ul>
+            <li>Spotify API를 통한 다양한 기능 확장 가능</li>
+            <li>별도 회원가입 없이 곡 추천, 플레이리스트 연동 등 고급 기능을 바로 사용 가능</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
+---
 
-✅ 기능 1. `사용자 로그인 (Spotify OAuth 연동)`
-- **기획 의도 및 구현 방법**
-    - Spotify OAuth 인증 방식을 사용하여 사용자 로그인 구현
-    - 자체 회원 시스템을 만들지 않고, Spotify 계정을 통해 로그인하게 하여 사용자 진입 장벽을 낮춤
-- **주요 코드 구조 또는 API 설계 내용**
-    - `GET /login` : Spotify 인증 페이지로 리디렉션
-    - `GET /callback` : 로그인 후 redirect된 요청에서 사용자 토큰/정보 저장
-- **기능 구현 과정에서 고려한 점**
-    - 이후 기능인 `플레이리스트 정보 조회`와 `플레이리스트 음악 추가`를 위해 Spotify API 연동이 필요
-    - OAuth 인증 플로우 특성상 사용자 경험에 어색함이 없도록 redirect 흐름을 자연스럽게 구성
-- **기능 적용 후 기대 효과**
-    - Spotify API를 통한 다양한 기능 확장이 가능
-    - 사용자는 별도 회원가입 없이 곡 추천, 플레이리스트 연동 등 고급 기능을 바로 이용 가능
+<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 좌측 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/spotify-login-flow.png" alt="Onboarding 시스템" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <h4 style="margin-top: 0;">기능 2. 온보딩 시스템</h4>
+
+      <ul>
+        <li><strong>기획 의도 및 구현 방법</strong>
+          <ul>
+            <li>사용자 임베딩이 존재하지 않는 신규 유저를 위한 최초 1회 진행 온보딩 기능</li>
+            <li>가게 분위기를 표현하는 태그를 사용자가 선택하면, 해당 태그와 연관된 곡 중 20곡을 선별</li>
+            <li>이 중 2곡씩 총 10세트로 제시하고, 각 세트마다 1곡을 선택</li>
+            <li> 사용자가 선택한 10곡의 임베딩 평균값을 이용해 신규 사용자 임베딩 생성</li>
+          </ul>
+        </li>
+        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+          <ul>
+            <li><code>POST /onboarding</code> : 사용자가 선택한 분위기 태그를 저장하고, 해당 태그에 맞는 후보곡 20곡을 반환</li>
+          </ul>
+        </li>
+        <li><strong>기능 구현 과정에서 고려한 점</strong>
+          <ul>
+            <li>정확한 임베딩 생성을 위해 태그별로 상호작용 데이터가 풍부한 곡들을 우선적으로 선별</li>
+            <li>같은 태그 요청이 반복될 가능성이 높아, Redis 캐싱을 통해 응답 속도 최적화</li>
+          </ul>
+        </li>
+        <li><strong>기능 적용 후 기대 효과</strong>
+          <ul>
+            <li>음원 상호작용 이력이 없는 신규 유저도 즉시 추천 시스템을 이용할 수 있는 사용자 임베딩 생성 가능</li>
+            <li>사용자 초기 경험을 자연스럽게 설계함으로써 서비스 진입 허들을 낮춤</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 
-✅ 기능 2. `온보딩 시스템`
-- **기획 의도 및 구현 방법**
-    - 사용자 임베딩이 존재하지 않는 신규 유저를 위한 최초 1회 진행 온보딩 기능
-    - 가게 분위기를 표현하는 태그를 사용자가 선택하면, 해당 태그와 연관된 곡 중 20곡을 선별
-    - 이 중 2곡씩 총 10세트로 제시하고, 각 세트마다 1곡을 선택
-    - 사용자가 선택한 10곡의 임베딩 평균값을 이용해 신규 사용자 임베딩 생성
-- **주요 코드 구조 또는 API 설계 내용**
-    - `POST /onboarding` : 사용자가 선택한 분위기 태그를 저장하고, 해당 태그에 맞는 후보곡 20곡을 반환
-- **기능 구현 과정에서 고려한 점**
-    - 정확한 임베딩 생성을 위해 태그별로 상호작용 데이터가 풍부한 곡들을 우선적으로 선별
-    - 같은 태그 요청이 반복될 가능성이 높아, Redis 캐싱을 통해 응답 속도 최적화
-- **기능 적용 후 기대 효과**
-    - 음원 상호작용 이력이 없는 신규 유저도 즉시 추천 시스템을 이용할 수 있는 사용자 임베딩 생성 가능
-    - 사용자 초기 경험을 자연스럽게 설계함으로써 서비스 진입 허들을 낮춤
+<!-- 기능명 및 개요 -->
+<h4 style="margin-top: 1.5em;">기능 3. 사용자 플레이리스트 선택</h4>
+<strong>기획 의도 및 구현 방법</strong>
+<ul>
+  <li>사용자 취향을 정교하게 반영하기 위해, 보유 플레이리스트의 음원 정보와 추천 곡 간 유사도를 기반으로 정렬</li>
+  <li>사용자의 상황에 맞게 Spotify 연동 또는 이미지 OCR 방식 중 하나를 선택해 정보 등록 가능하도록 설계</li>
+</ul>
 
----
+<!-- 방법 1: Spotify 연동 -->
+<div style="display: flex; gap: 32px; margin: 2em 0;">
+  <!-- 좌측: 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/tune-your-shop_function_playlist.png" alt="Spotify 플레이리스트 연동 예시" style="width: 100%; height: auto;">
+  </div>
 
-✅ 기능 3. `사용자 플레이리스트 선택`
-- **기획 의도 및 구현 방법**
-    - 사용자 취향을 정교하게 반영하기 위해, 사용자 보유 플레이리스트의 음원 정보와 추천 곡 간 유사도를 기반으로 추천 결과를 정렬
-    - 사용자의 상황에 따라 두 가지 방식 중 하나를 선택하여 플레이리스트 정보를 등록할 수 있도록 구성
+  <!-- 우측: 텍스트 -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <strong>▶ 방법 1. Spotify 연동</strong>
+      <ul>
+        <li><strong>API</strong>: <code>GET /users/{user_id}/playlists</code> — 사용자의 Spotify 플레이리스트 목록 반환</li>
+        <li><strong>고려사항</strong>
+          <ul>
+            <li>로그인 후 자연스럽게 플레이리스트 조회로 이어지는 UX 구성</li>
+            <li>플레이리스트 트랙 정보를 기반으로 유사도 정렬 가능한 구조 설계</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-▶ 방법 1. Spotify 연동
-- **주요 코드 구조 또는 API 설계 내용**
-    - `GET /users/{user_id}/playlists` : 사용자가 Spotify에 보유 중인 플레이리스트 목록 반환
-- **기능 구현 과정에서 고려한 점**
-    - 로그인 → 플레이리스트 조회로 이어지는 자연스러운 사용자 경험을 고려해 Spotify 연동 흐름 설계
-    - Spotify 플레이리스트의 트랙 정보를 토대로 유사도 기반 정렬 가능하도록 데이터 연계 구성
+<!-- 방법 2: 이미지 OCR 업로드 -->
+<div style="display: flex; gap: 32px; margin: 2em 0;">
+  <!-- 좌측: 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/tune-your-shop_function_ocr.png" alt="OCR 이미지 업로드 예시" style="width: 100%; height: auto;">
+  </div>
 
-▶ 방법 2. 이미지 OCR 업로드
-- **주요 코드 구조 또는 API 설계 내용**
-    - `POST /playlist/image` : 사용자가 업로드한 이미지에서 OCR을 통해 음원 목록 추출 후 반환
-- **기능 구현 과정에서 고려한 점**
-    - Upstage OCR API 활용 
-    - OCR 인식률 한계를 보완하기 위해 사용자 검증 프로세스를 필수로 도입
-    - 음원명과 아티스트명만 정확히 추출하기 위해 전·후처리 적용
-        - 전처리: 이미지 업로드 시 예시 이미지를 제공하여 불필요한 정보 제거 유도
-        - 후처리: OCR 결과에서 불용어 필터링 및 정규식 기반 텍스트 정제
+  <!-- 우측: 텍스트 -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <strong>▶ 방법 2. 이미지 OCR 업로드</strong>
+      <ul>
+        <li><strong>API</strong>: <code>POST /playlist/image</code> — OCR로 음원 목록 추출</li>
+        <li><strong>고려사항</strong>
+          <ul>
+            <li>Upstage OCR API 활용 및 사용자 검증 프로세스 도입</li>
+            <li>전처리: 예시 이미지 제공을 통해 불필요한 정보 제거 유도</li>
+            <li>후처리: 불용어 필터링, 정규식 기반 텍스트 정제 적용</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-
-- **기능 적용 후 기대 효과**
-    - 다양한 방식의 플레이리스트 등록을 지원하여 사용자 접근성과 활용도 향상
-    - 사용자 취향이 반영된 플레이리스트 기반의 유사도 정렬로 더 정확한 추천 결과 제공
+<!-- 기대 효과 -->
+<strong>기능 적용 후 기대 효과</strong>
+<ul>
+  <li>두 가지 등록 방식을 통해 사용자 편의성과 접근성 향상</li>
+  <li>정확한 취향 반영으로 사용자 만족도 및 추천 신뢰도 상승</li>
+  <li>기존 음악 플랫폼보다 개인화된 큐레이션 제공 가능</li>
+</ul>
 
 ---
 
