@@ -101,7 +101,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
-    <img src="/assets/images/spotify-login-flow.png" alt="Onboarding 시스템" style="width: 100%; height: auto;">
+    <img src="/assets/images/tune-your-shop_function_onboarding.png" alt="Onboarding 시스템" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
@@ -144,10 +144,15 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 <!-- 기능명 및 개요 -->
 <h4 style="margin-top: 1.5em;">기능 3. 사용자 플레이리스트 선택</h4>
-<strong>기획 의도 및 구현 방법</strong>
 <ul>
-  <li>사용자 취향을 정교하게 반영하기 위해, 보유 플레이리스트의 음원 정보와 추천 곡 간 유사도를 기반으로 정렬</li>
-  <li>사용자의 상황에 맞게 Spotify 연동 또는 이미지 OCR 방식 중 하나를 선택해 정보 등록 가능하도록 설계</li>
+  <li><strong>기획 의도 및 구현 방법</strong>
+    <ul>
+      <li>사용자 임베딩이 존재하지 않는 신규 유저를 위한 최초 1회 진행 온보딩 기능</li>
+      <li>가게 분위기를 표현하는 태그를 사용자가 선택하면, 해당 태그와 연관된 곡 중 20곡을 선별</li>
+      <li>이 중 2곡씩 총 10세트로 제시하고, 각 세트마다 1곡을 선택</li>
+      <li> 사용자가 선택한 10곡의 임베딩 평균값을 이용해 신규 사용자 임베딩 생성</li>
+    </ul>
+  </li>
 </ul>
 
 <!-- 방법 1: Spotify 연동 -->
@@ -162,8 +167,12 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
     <div style="width: 100%;">
       <strong>▶ 방법 1. Spotify 연동</strong>
       <ul>
-        <li><strong>API</strong>: <code>GET /users/{user_id}/playlists</code> — 사용자의 Spotify 플레이리스트 목록 반환</li>
-        <li><strong>고려사항</strong>
+        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+          <ul>
+            <li><code>GET /users/{user_id}/playlists</code> : 사용자가 Spotify에 보유 중인 플레이리스트 목록 반환</li>
+          </ul>
+        </li>
+        <li><strong>기능 구현 과정에서 고려한 점</strong>
           <ul>
             <li>로그인 후 자연스럽게 플레이리스트 조회로 이어지는 UX 구성</li>
             <li>플레이리스트 트랙 정보를 기반으로 유사도 정렬 가능한 구조 설계</li>
@@ -186,12 +195,19 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
     <div style="width: 100%;">
       <strong>▶ 방법 2. 이미지 OCR 업로드</strong>
       <ul>
-        <li><strong>API</strong>: <code>POST /playlist/image</code> — OCR로 음원 목록 추출</li>
-        <li><strong>고려사항</strong>
+        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+          <ul>
+            <li><code>POST /playlist/image</code> : 사용자가 업로드한 이미지에서 OCR을 통해 음원 목록 추출 후 반환</li>
+          </ul>
+        </li>
+        <li><strong>기능 구현 과정에서 고려한 점</strong>
           <ul>
             <li>Upstage OCR API 활용 및 사용자 검증 프로세스 도입</li>
-            <li>전처리: 예시 이미지 제공을 통해 불필요한 정보 제거 유도</li>
-            <li>후처리: 불용어 필터링, 정규식 기반 텍스트 정제 적용</li>
+            <li> 음원명과 아티스트명만 정확히 추출하기 위해 전·후처리 적용</li>
+            <ul>
+              <li>전처리: 예시 이미지 제공을 통해 불필요한 정보 제거 유도</li>
+              <li>후처리: 불용어 필터링, 정규식 기반 텍스트 정제 적용</li>
+            </ul>
           </ul>
         </li>
       </ul>
@@ -209,26 +225,55 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ---
 
-✅ 기능 4. `개인화 음악 추천`
-- **기획 의도 및 구현 방법**
-    - 사용자 임베딩과 선택한 플레이리스트 트랙 정보를 함께 고려해 개인화된 음악 추천 제공
-    - 사용자 임베딩은 사용자의 상호작용 이력을 반영하여 지속적으로 갱신됨
-        - 신규 사용자는 온보딩 기반 선택 정보로 초기 임베딩 생성
-        - 기존 사용자는 과거 추천 결과 중 선택한 곡 로그를 반영하여 임베딩 재생성
-    - 선택한 플레이리스트의 트랙 메타 정보를 기반으로 추천 모델 API에 입력값 전달 → 추론 결과를 가공해 추천 결과 반환
-- **주요 코드 구조 또는 API 설계 내용**
-    - `GET /playlists/{playlist_id}/tracks` : Spotify 연동 플레이리스트 선택 시 트랙 목록과 사용자 임베딩을 기반으로 추천 결과 반환
-    - `POST /playlist/image/tracks` : OCR로 추출한 트랙 목록과 사용자 임베딩을 기반으로 추천 결과 반환
-- **기능 구현 과정에서 고려한 점**
-    - 트랙 메타 정보가 DB에 없는 경우 Last.fm API 연동을 통해 보완
-    - 추천 결과는 단순 모델 출력이 아닌, 사용자 입력에 대한 반응성이 느껴지도록 ‘유사도 기반 정렬’ 방식 적용
-- **기능 적용 후 기대 효과**
-    - 단순 인기 기반이 아닌, 사용자 취향을 반영한 맞춤형 추천 제공
-    - 사용자 임베딩과 플레이리스트를 모두 반영하여 추천의 정확도 향상
+<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 좌측 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/tune-your-shop_function_recommendation.png" alt="추천 결과 반환 예시" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <h4 style="margin-top: 0;">기능 4. 개인화 음악 추천</h4>
+
+      <ul>
+        <li><strong>기획 의도 및 구현 방법</strong>
+          <ul>
+            <li>사용자 임베딩과 선택한 플레이리스트 트랙 정보를 함께 고려해 개인화된 음악 추천 제공</li>
+            <li>사용자 임베딩은 사용자의 상호작용 이력을 반영하여 지속적으로 갱신됨</li>
+            <ul>
+              <li>신규 사용자는 온보딩 기반 선택 정보로 초기 임베딩 생성</li>
+              <li>기존 사용자는 과거 추천 결과 중 선택한 곡 로그를 반영하여 임베딩 재생성</li>
+            </ul>
+            <li>선택한 플레이리스트의 트랙 메타 정보를 기반으로 추천 모델 API에 입력값 전달 → 추론 결과를 가공해 추천 결과 반환</li>
+          </ul>
+        </li>
+        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+          <ul>
+            <li><code>GET /playlists/{playlist_id}/tracks</code> : Spotify 연동 플레이리스트 선택 시 트랙 목록과 사용자 임베딩을 기반으로 추천 결과 반환</li>
+            <li><code>POST /playlist/image/tracks</code> : OCR로 추출한 트랙 목록과 사용자 임베딩을 기반으로 추천 결과 반환</li>
+          </ul>
+        </li>
+        <li><strong>기능 구현 과정에서 고려한 점</strong>
+          <ul>
+            <li>트랙 메타 정보가 DB에 없는 경우 Last.fm API 연동을 통해 보완</li>
+            <li>추천 결과는 단순 모델 출력이 아닌, 사용자 입력에 대한 반응성이 느껴지도록 ‘유사도 기반 정렬’ 방식 적용</li>
+          </ul>
+        </li>
+        <li><strong>기능 적용 후 기대 효과</strong>
+          <ul>
+            <li>단순 인기 기반이 아닌, 사용자 취향을 반영한 맞춤형 추천 제공</li>
+            <li>사용자 임베딩과 플레이리스트를 모두 반영하여 추천의 정확도 향상</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 
-✅ 기능 5. `추천 음악 플레이리스트에 추가`
+### 기능 5. `추천 음악 플레이리스트에 추가`
 - **기획 의도 및 구현 방법**
     - 추천된 음악 중 사용자가 선택한 곡들을 본인의 플레이리스트에 손쉽게 추가할 수 있도록 지원
     - Spotify 연동 유저는 기존에 선택한 플레이리스트에 곡을 추가
