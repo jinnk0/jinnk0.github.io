@@ -143,7 +143,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 ---
 
 <!-- 기능명 및 개요 -->
-<h4 style="margin-top: 1.5em;">기능 3. 사용자 플레이리스트 선택</h4>
+<h3 style="margin-top: 1.5em;">기능 3. 사용자 플레이리스트 선택</h3>
 <ul>
   <li><strong>기획 의도 및 구현 방법</strong>
     <ul>
@@ -291,7 +291,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 ## 개발 과정에서의 어려움 및 문제 해결 과정
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
-  <div style="flex: 0 0 300px;">
+  <div style="flex: 0 0 300px; display: flex; align-items: center;">
     <img src="/assets/images/tune-your-shop_problem2.png" alt="응답 시간 단축 표" style="width: 100%; height: auto;">
   </div>
 
