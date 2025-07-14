@@ -22,11 +22,11 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 <div style="display: flex; gap: 24px; align-items: flex-start;">
   <div style="flex: 1; text-align: center;">
     <img src="/assets/images/tune-your-shop_graph.png" alt="연구결과 이미지" style="max-width: 100%; height: 250px; object-fit: contain;">
-    <p style="font-size: 0.9em;">매장 분위기에 어울리는 음악은 매출 증가에 기여, 반면 부적절한 음악은 매출을 떨어뜨림</p>
+    <p style="font-size: 0.5em;">매장 분위기에 어울리는 음악은 매출 증가에 기여, 반면 부적절한 음악은 매출을 떨어뜨림</p>
   </div>
   <div style="flex: 1; text-align: center;">
     <img src="/assets/images/tune-your-shop_graph2.png" alt="기존 서비스 이미지" style="max-width: 100%; height: 250px; object-fit: contain;">
-    <p style="font-size: 0.9em;">기존 큐레이션 서비스는 대형 매장 중심, 소상공인은 시간·비용 제약으로 적절한 음악 선곡이 어려움</p>
+    <p style="font-size: 0.5em;">기존 큐레이션 서비스는 대형 매장 중심, 소상공인은 시간·비용 제약으로 적절한 음악 선곡이 어려움</p>
   </div>
 </div>
 
