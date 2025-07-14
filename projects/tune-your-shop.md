@@ -289,20 +289,74 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 
 ## 개발 과정에서의 어려움 및 문제 해결 과정
-- **모델 결과 반환 API 응답 속도 최적화**
-    - 문제점: 추천 모델 API 응답 지연으로 사용자 경험 저하 우려
-    - 해결 방법:
-        - DB 쿼리를 기존 `EXISTS + ORDER BY`에서 `JOIN + IN` 연산자로 변경해 트랙명, 아티스트명 조회 최적화 (47% 속도 단축)
-        - Python 코드 내에서 정렬 처리로 DB 부하 감소
-        - 외부 API 호출을 `asyncio.gather()`로 비동기 처리해 61% 추가 단축
-    - 최종 성과: 초기 대비 79% 응답 속도 단축으로 서비스 체감 성능 크게 개선
-- **OCR 인식 최적화 및 음원 매칭 문제 해결**
-    - 문제점:
-        - 플레이리스트 캡처 이미지에서 트랙명/아티스트명이 길어 ‘…’으로 생략되어 데이터베이스와 정확한 매칭 어려움
-        - OCR 결과에 동영상, 불용어 등 인식 오류 포함
-    - 해결 방법:
-        - ‘…’ 생략 부분을 퍼센트(%) 와일드카드로 변환해 SQL `LIKE` 검색 적용
-        - difflib 라이브러리로 텍스트 유사도 계산, 60% 이상일 경우 동일 음원으로 판단
-        - 정규표현식으로 불용어 필터링 및 사전 제외 단어 리스트 관리
-        - 사용자 직접 검증 프로세스를 추가해 최종 음원 확정
-    - 결과: OCR 인식 오류를 효과적으로 보완해 사용자 경험과 데이터 정확도 향상
+<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 좌측 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/tune-your-shop_problem2.png" alt="응답 시간 단축 표" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <h4 style="margin-top: 0;">모델 결과 반환 API 응답 속도 최적화</h4>
+
+      <ul>
+        <li><strong>문제점</strong>
+          <ul>
+            <li>추천 모델 API 응답 지연으로 사용자 경험 저하 우려</li>
+          </ul>
+        </li>
+        <li><strong>해결 방법</strong>
+          <ul>
+            <li> DB 쿼리를 기존 <code>EXISTS + ORDER BY</code>에서 <code>JOIN + IN</code> 연산자로 변경해 트랙명, 아티스트명 조회 최적화 (47% 속도 단축)</li>
+            <li>Python 코드 내에서 정렬 처리로 DB 부하 감소</li>
+            <li>외부 API 호출을 `asyncio.gather()`로 비동기 처리해 61% 추가 단축</li>
+          </ul>
+        </li>
+        <li><strong>최종 성과</strong>
+          <ul>
+            <li>초기 대비 79% 응답 속도 단축으로 서비스 체감 성능 크게 개선</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; gap: 32px; margin: 2em 0;">
+  <!-- 좌측: 이미지 2개 세로 배치 -->
+  <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
+    <img src="/assets/images/tune-your-shop_problem1.png" alt="생략되는 긴 문자열 예시" style="width: 100%; height: auto;">
+    <img src="/assets/images/tune-your-shop_problem3.png" alt="불용어 예시" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
+  <div style="flex: 1; display: flex; align-items: center;">
+    <div style="width: 100%;">
+      <h4 style="margin-top: 0;">OCR 인식 최적화 및 음원 매칭 문제 해결</h4>
+
+      <ul>
+        <li><strong>문제점</strong>
+          <ul>
+            <li>플레이리스트 캡처 이미지에서 트랙명/아티스트명이 길어 ‘…’으로 생략되어 데이터베이스와 정확한 매칭 어려움</li>
+            <li>OCR 결과에 동영상, 불용어 등 인식 오류 포함</li>
+          </ul>
+        </li>
+        <li><strong>해결 방법</strong>
+          <ul>
+            <li>‘…’ 생략 부분을 퍼센트(%) 와일드카드로 변환해 SQL `LIKE` 검색 적용</li>
+            <li>difflib 라이브러리로 텍스트 유사도 계산, 60% 이상일 경우 동일 음원으로 판단</li>
+            <li>정규표현식으로 불용어 필터링 및 사전 제외 단어 리스트 관리</li>
+            <li>사용자 직접 검증 프로세스를 추가해 최종 음원 확정</li>
+          </ul>
+        </li>
+        <li><strong>결과</strong>
+          <ul>
+            <li>OCR 인식 오류를 효과적으로 보완해 사용자 경험과 데이터 정확도 향상</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
