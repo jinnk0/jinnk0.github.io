@@ -55,6 +55,46 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ## 주요 기능 상세 설명
 
+<div style="display: flex; align-items: flex-start; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 이미지 -->
+  <div style="flex: 0 0 300px;">
+    <img src="/assets/images/tune-your-shop_function_login.png" alt="Spotify OAuth 로그인 기능" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- 텍스트 -->
+  <div style="flex: 1;">
+    <h4 style="margin-top: 0;">기능 1. 사용자 로그인 (Spotify OAuth 연동)</h4>
+
+    <ul>
+      <li><strong>기획 의도 및 구현 방법</strong>
+        <ul>
+          <li>Spotify OAuth 인증 방식을 사용하여 사용자 로그인 구현</li>
+          <li>자체 회원 시스템 없이 Spotify 계정을 통해 로그인하여 진입 장벽을 낮춤</li>
+        </ul>
+      </li>
+      <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
+        <ul>
+          <li><code>GET /login</code> : Spotify 인증 페이지로 리디렉션</li>
+          <li><code>GET /callback</code> : 로그인 후 redirect된 요청에서 사용자 토큰 및 정보 저장</li>
+        </ul>
+      </li>
+      <li><strong>기능 구현 과정에서 고려한 점</strong>
+        <ul>
+          <li>이후 기능인 플레이리스트 조회 및 음악 추가를 위해 Spotify API 연동이 필수</li>
+          <li>OAuth 인증 플로우의 자연스러운 UX를 위해 redirect 흐름을 부드럽게 구성</li>
+        </ul>
+      </li>
+      <li><strong>기능 적용 후 기대 효과</strong>
+        <ul>
+          <li>Spotify API를 통한 다양한 기능 확장 가능</li>
+          <li>별도 회원가입 없이 곡 추천, 플레이리스트 연동 등 고급 기능을 바로 사용 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
 ✅ 기능 1. `사용자 로그인 (Spotify OAuth 연동)`
 - **기획 의도 및 구현 방법**
     - Spotify OAuth 인증 방식을 사용하여 사용자 로그인 구현
