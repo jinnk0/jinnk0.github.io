@@ -15,7 +15,7 @@ related: true
 <div style="display: flex; gap: 10px; margin-bottom: 2em;">
 
   <!-- GitHub 버튼 -->
-  <a href="https://github.com/your-repo" target="_blank"
+  <a href="https://github.com/boostcampaitech7/level4-recsys-finalproject-hackathon-recsys-02-lv3" target="_blank"
      style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
             background-color: #f8f9fa; color: #212529; text-decoration: none;
             font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
@@ -23,7 +23,7 @@ related: true
   </a>
 
   <!-- 시연 영상 버튼 -->
-  <a href="https://youtube.com/demo" target="_blank"
+  <a href="https://www.youtube.com/watch?v=uHG8z3V_AKU" target="_blank"
      style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
             background-color: #f8f9fa; color: #212529; text-decoration: none;
             font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
@@ -31,7 +31,7 @@ related: true
   </a>
 
   <!-- 발표 자료 버튼 -->
-  <a href="https://slides.com/your-ppt" target="_blank"
+  <a href="https://drive.google.com/file/d/1NEFwS3l9uHlbgT2XElacOubI_-_FsrEs/view" target="_blank"
      style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
             background-color: #f8f9fa; color: #212529; text-decoration: none;
             font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
