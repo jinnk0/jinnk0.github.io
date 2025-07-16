@@ -10,6 +10,13 @@ related: true
      alt="Tune Your Shop"
      style="max-width: 100%; height: auto; display: block; margin: 2rem auto;" />
 
+<!-- 버튼 링크 -->
+<div style="display: flex; gap: 12px; margin-bottom: 2em;">
+  <a href="https://github.com/boostcampaitech7/level4-recsys-finalproject-hackathon-recsys-02-lv3" target="_blank" style="padding: 8px 16px; background-color: #2d3748; color: white; text-decoration: none; border-radius: 6px;">GitHub</a>
+  <a href="https://www.youtube.com/watch?v=uHG8z3V_AKU" target="_blank" style="padding: 8px 16px; background-color: #e53e3e; color: white; text-decoration: none; border-radius: 6px;">시연 영상</a>
+  <a href="https://drive.google.com/file/d/1NEFwS3l9uHlbgT2XElacOubI_-_FsrEs/view" target="_blank" style="padding: 8px 16px; background-color: #3182ce; color: white; text-decoration: none; border-radius: 6px;">발표 PPT</a>
+</div>
+
 - 기간 : 2025.01.06 ~ 2025.02.12 (5주)
 - 참여 인원 : 5인
 
