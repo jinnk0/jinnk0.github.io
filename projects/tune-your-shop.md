@@ -11,11 +11,35 @@ related: true
      style="max-width: 100%; height: auto; display: block; margin: 2rem auto;" />
 
 <!-- 버튼 링크 -->
-<div style="display: flex; gap: 12px; margin-bottom: 2em;">
-  <a href="https://github.com/boostcampaitech7/level4-recsys-finalproject-hackathon-recsys-02-lv3" target="_blank" style="padding: 8px 16px; background-color: #2d3748; color: white; text-decoration: none; border-radius: 6px;">GitHub</a>
-  <a href="https://www.youtube.com/watch?v=uHG8z3V_AKU" target="_blank" style="padding: 8px 16px; background-color: #e53e3e; color: white; text-decoration: none; border-radius: 6px;">시연 영상</a>
-  <a href="https://drive.google.com/file/d/1NEFwS3l9uHlbgT2XElacOubI_-_FsrEs/view" target="_blank" style="padding: 8px 16px; background-color: #3182ce; color: white; text-decoration: none; border-radius: 6px;">발표 PPT</a>
+<!-- Font Awesome 아이콘이 필요하므로 minimal-mistakes에서 이미 로딩됨 -->
+<div style="display: flex; gap: 10px; margin-bottom: 2em;">
+
+  <!-- GitHub 버튼 -->
+  <a href="https://github.com/your-repo" target="_blank"
+     style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+            background-color: #f8f9fa; color: #212529; text-decoration: none;
+            font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+
+  <!-- 시연 영상 버튼 -->
+  <a href="https://youtube.com/demo" target="_blank"
+     style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+            background-color: #f8f9fa; color: #212529; text-decoration: none;
+            font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
+    <i class="fas fa-video"></i> 시연 영상
+  </a>
+
+  <!-- 발표 자료 버튼 -->
+  <a href="https://slides.com/your-ppt" target="_blank"
+     style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+            background-color: #f8f9fa; color: #212529; text-decoration: none;
+            font-size: 14px; border-radius: 6px; border: 1px solid #dee2e6;">
+    <i class="fas fa-file-alt"></i> 발표 자료
+  </a>
+
 </div>
+
 
 - 기간 : 2025.01.06 ~ 2025.02.12 (5주)
 - 참여 인원 : 5인
