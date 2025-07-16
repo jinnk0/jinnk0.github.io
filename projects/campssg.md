@@ -199,7 +199,7 @@ related: true
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_product1.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
-    <img src="/assets/images/campssg_function_product2.png" alt="상품 개별 등록록" style="width: 100%; height: auto;">
+    <img src="/assets/images/campssg_function_product2.png" alt="상품 개별 등록" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
@@ -277,8 +277,6 @@ related: true
     </div>
   </div>
 </div>
-
----
 
 ## 개발 과정에서의 어려움 및 문제 해결 과정
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
