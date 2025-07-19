@@ -111,9 +111,9 @@ related: true
 
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
-  <div style="flex: 0 0 600px;">
-    <img src="/assets/images/campssg_function_cart.png" alt="캠핑장 위치 기반 마트 조회" style="width: 100%; height: auto;">
-  </div>
+  <img src="/assets/images/campssg_function_cart.png"
+     alt="Campssg 아키텍처"
+     style="max-width: 80%; height: auto; display: block; margin: 2rem auto;" />
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
   <div style="flex: 1; display: flex; align-items: center;">
