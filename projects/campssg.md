@@ -109,8 +109,6 @@ related: true
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
-  <!-- 좌측 이미지 -->
   <img src="/assets/images/campssg_function_cart.png"
      alt="Campssg 아키텍처"
      style="max-width: 80%; height: auto; display: block; margin: 2rem auto;" />
@@ -129,6 +127,12 @@ related: true
 - **기능 적용 후 기대 효과**
     - 다양한 상품을 편리하게 한 번에 구매 가능
   	- 중복 결제나 상품 혼선을 방지함으로써 구매 전환율 향상
+ 
+---
+
+<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+  <!-- 좌측 이미지 -->
+
 <!--
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
   <div style="flex: 1; display: flex; align-items: center;">
@@ -170,8 +174,9 @@ related: true
 
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
-  <div style="flex: 0 0 300px;">
-    <img src="/assets/images/campssg_function_price.png" alt="가격 비교 예시" style="width: 100%; height: auto;">
+  <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
+    <img src="/assets/images/campssg_function_cart1.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
+    <img src="/assets/images/campssg_function_cart2.png" alt="상품 개별 등록" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
