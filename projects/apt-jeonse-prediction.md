@@ -1,6 +1,6 @@
 ---
-title: "개인화된 Top10 영화 추천"
-permalink: /projects/top10-movie-recommendation/
+title: "수도권 아파트 전세가 예측"
+permalink: /projects/apt-jeonse-prediction/
 layout: single
 classes: wide
 author_profile: false
