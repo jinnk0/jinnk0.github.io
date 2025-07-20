@@ -94,7 +94,7 @@ MAE 점수를 최소화하는 수도권 아파트 전세가 예측 모델 개발
   </div>
 
 
-  #### 공간적 가중치 행렬 구현 과정에서의 Trouble Shooting
+  <h4>공간적 가중치 행렬 구현 과정에서의 Trouble Shooting</h4>
   
   <div style="flex: 1; display: flex; align-items: center;">
     <div style="width: 100%;">
