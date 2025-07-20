@@ -1,5 +1,5 @@
 ---
-title: "개인화된 Top10 영화 추천천"
+title: "개인화된 Top10 영화 추천"
 permalink: /projects/top10-movie-recommendation/
 layout: single
 classes: wide
