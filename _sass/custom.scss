@@ -19,7 +19,7 @@ article.page .page__content > p {
 article.page .page__content ul {
   font-size: 16px;
   line-height: 1.5;
-  margin-left: 0.6em; // 들여쓰기 조절 가능
+  margin-left: 0.6em;
 }
 
 .sidebar__right.sticky {
@@ -28,3 +28,33 @@ article.page .page__content ul {
   z-index: 10; 
   background-color: #fff;
 }
+
+/* 사이드바 너비 조정 */
+@media (min-width: 80em) {
+  .sidebar {
+    width: calc(400px - 3em);
+  }
+}
+
+/* 사이드바 내 프로필 사진 크기 조정 */
+.author__avatar img {
+  max-width: 350px;
+  border-radius: 50%;
+}
+
+/* 사이드바 텍스트 폰트 조정 */
+.sidebar p,
+.sidebar li {
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-size: 0.65em;
+  line-height: 1.5;
+}
+
+/* 본문(archive) 영역 너비 조정 */
+@media (min-width: 80em) {
+  .archive {
+    width: calc(100% - 400px);
+    padding-inline-end: 20px;
+  }
+}
+
