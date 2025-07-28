@@ -7,6 +7,7 @@ author_profile: false
 related: true
 toc: true
 toc_sticky: true
+toc_position: left
 ---
 <img src="/assets/images/tune-your-shop.png"
      alt="Tune Your Shop"
@@ -74,16 +75,16 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
      alt="Tune Your Shop"
      style="max-width: 80%; height: auto; display: block; margin: 2rem auto;" />
 - **사용 기술 스택**:  Python, FastAPI, PostgreSQL, MongoDB, GCP, Docker
-- **아키텍처 구성 및 데이터 흐름**:  
+- **아키텍처 구성 및 데이터 흐름** 
 	- **프론트엔드**: React 기반, 모바일 사이즈 웹으로 구성. 사용자 요청 시 서비스 서버의 기능 API 호출
   - **서비스 서버**: FastAPI로 구현. 외부 API(Spotify, Last.fm, Upstage OCR) 연동, 프론트에 기능 API 제공
-  - **데이터베이스 구성**:
-		  - PostgreSQL: 관계형 데이터 저장 및 모델 학습용 벡터 저장
-	    - MongoDB: 사용자 로그 저장 및 개인화 추천 반영
-	    - Redis: 자주 사용하는 정보 캐싱하여 응답 속도 개선
-  - **AI 모델 서버**:
-	    - PyTorch 기반 LightGCN 모델 학습
-	    - Airflow로 주기적인 재학습 스케줄링
+  - **데이터베이스 구성**
+	  - PostgreSQL: 관계형 데이터 저장 및 모델 학습용 벡터 저장
+	  - MongoDB: 사용자 로그 저장 및 개인화 추천 반영
+	  - Redis: 자주 사용하는 정보 캐싱하여 응답 속도 개선
+  - **AI 모델 서버**
+	   - PyTorch 기반 LightGCN 모델 학습
+     - Airflow로 주기적인 재학습 스케줄링
 
 
 ## 주요 기능 상세 설명
