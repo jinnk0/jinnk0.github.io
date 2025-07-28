@@ -36,6 +36,13 @@ article.page .page__content ul {
   }
 }
 
+@media (min-width: 80em) {
+  article.page {
+    width: calc(100% - 20px);
+  }
+}
+
+
 /* 사이드바 내 프로필 사진 크기 조정 */
 .author__avatar img {
   max-width: 350px;
