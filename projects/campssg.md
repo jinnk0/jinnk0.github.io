@@ -112,7 +112,7 @@ related: true
 
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
-  <div style="flex: 0 0 600px; display: flex; flex-direction: column; gap: 16px;">
+  <div style="flex: 0 0 500px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_cart.png" alt="마트 상품 목록" style="width: 100%; height: auto;">
   </div>
 
@@ -197,8 +197,8 @@ related: true
 
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
-  <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
-    <img src="/assets/images/campssg_function_product1.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
+  <div style="flex: 0 0 500px; display: flex; flex-direction: column; gap: 16px;">
+    <img src="/assets/images/campssg_function_product.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
