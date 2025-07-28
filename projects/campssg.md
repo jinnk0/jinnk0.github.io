@@ -43,6 +43,7 @@ related: true
 #### 프로젝트 목표
 -  캠핑 시 반복되는 짐 준비의 번거로움을 줄이기 위해, 캠핑장 인근 마트에서 필요한 물품을 미리 주문하고 현장에서 간편하게 픽업할 수 있는 쇼핑 경험을 제공하는 것
 -  사용자에게는 짐 부담을 줄이고, 지역 마트에는 추가 매출 기회를 제공하는 상생 모델을 지향
+
 #### 프로젝트 배경
 - 캠핑을 갈 때 챙겨야 하는 짐이 많아 불편함
 - 캠핑 짐의 대부분은 캠핑장에서 소모하면 사라지는 물품
@@ -108,73 +109,6 @@ related: true
 </div>
 
 ---
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
-  <!-- 좌측 슬라이더 이미지 -->
-  <div style="flex: 0 0 300px; position: relative;">
-    <input type="radio" name="slide-set" id="slide-1" checked style="display: none;">
-    <input type="radio" name="slide-set" id="slide-2" style="display: none;">
-
-    <div style="overflow: hidden; position: relative; width: 100%; height: auto;">
-      <div style="display: flex; transition: transform 0.5s ease; width: 200%;"
-           id="slider-track">
-        <img src="/assets/images/campssg_function_cart1.png" style="width: 100%; height: auto;">
-        <img src="/assets/images/campssg_function_cart2.png" style="width: 100%; height: auto;">
-      </div>
-    </div>
-
-    <!-- 슬라이드 네비게이션 버튼 -->
-    <div style="text-align: center; margin-top: 8px;">
-      <label for="slide-1" style="cursor: pointer; font-size: 1.2em; padding: 0 6px;">●</label>
-      <label for="slide-2" style="cursor: pointer; font-size: 1.2em; padding: 0 6px;">●</label>
-    </div>
-
-    <style>
-      #slide-1:checked ~ div #slider-track {
-        transform: translateX(0%);
-      }
-      #slide-2:checked ~ div #slider-track {
-        transform: translateX(-100%);
-      }
-    </style>
-  </div>
-
-  <!-- 우측 텍스트 -->
-  <div style="flex: 1; display: flex; align-items: center;">
-    <div style="width: 100%;">
-      <h4 style="margin-top: 0;">기능 2. 마트 상품 조회 및 장바구니</h4>
-
-      <ul>
-        <li><strong>기획 의도 및 구현 방법</strong>
-          <ul>
-            <li>캠핑에 필요한 물품은 여러 개를 한 번에 구매하는 경우가 많기 때문에, 장바구니 기능을 통해 상품을 모아서 주문할 수 있도록 설계</li>
-          </ul>
-        </li>
-        <li><strong>주요 코드 구조 또는 API 설계 내용</strong>
-          <ul>
-            <li><code>GET /search/mart/{martId}</code> : 선택한 마트의 상품 목록 반환</li>
-            <li><code>GET /serach/mart/canAdd/{martId}</code> : 선택한 마트의 상품이 기존 장바구니 상품의 마트와 일치하는지 확인</li>
-            <li><code>POST /search/mart/{martId}/{productId}</code> : 일치할 경우 해당 상품을 장바구니에 추가</li>
-            <li><code>POST /search/mart/new/{productId}</code> : 일치하지 않을 경우 기존 장바구니를 삭제하고 새로운 장바구니를 생성하여 상품 추가</li>
-          </ul>
-        </li>
-        <li><strong>기능 구현 과정에서 고려한 점</strong>
-          <ul>
-            <li>사용자 혼란 방지를 위해 장바구니에는 항상 하나의 마트의 상품만 담기도록 제약 조건 설정</li>
-            <li>같은 마트 여부 확인 API를 통해 장바구니 일관성을 보장하고, UX 혼란 최소화</li>
-          </ul>
-        </li>
-        <li><strong>기능 적용 후 기대 효과</strong>
-          <ul>
-            <li>다양한 상품을 편리하게 한 번에 구매 가능</li>
-            <li>중복 결제나 상품 혼선을 방지함으로써 구매 전환율 향상</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
----
 
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
@@ -224,7 +158,7 @@ related: true
 <div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
-    <img src="/assets/images/campssg_function_price.png" alt="상품 상품 가격 비교 예시시" style="width: 100%; height: auto;">
+    <img src="/assets/images/campssg_function_price.png" alt="상품 상품 가격 비교 예시" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
@@ -266,7 +200,6 @@ related: true
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_product1.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
-    <img src="/assets/images/campssg_function_product2.png" alt="상품 개별 등록" style="width: 100%; height: auto;">
   </div>
 
   <!-- 우측 텍스트를 감싸는 flex wrapper (세로 중앙 정렬용) -->
