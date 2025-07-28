@@ -5,9 +5,6 @@ layout: single
 classes: wide
 author_profile: false
 related: true
-toc: true
-toc_sticky: true
-toc_position: left
 ---
 <img src="/assets/images/tune-your-shop.png"
      alt="Tune Your Shop"
@@ -181,10 +178,8 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 <ul>
   <li><strong>기획 의도 및 구현 방법</strong>
     <ul>
-      <li>사용자 임베딩이 존재하지 않는 신규 유저를 위한 최초 1회 진행 온보딩 기능</li>
-      <li>가게 분위기를 표현하는 태그를 사용자가 선택하면, 해당 태그와 연관된 곡 중 20곡을 선별</li>
-      <li>이 중 2곡씩 총 10세트로 제시하고, 각 세트마다 1곡을 선택</li>
-      <li> 사용자가 선택한 10곡의 임베딩 평균값을 이용해 신규 사용자 임베딩 생성</li>
+      <li>사용자 취향을 정교하게 반영하기 위해, 사용자 보유 플레이리스트의 음원 정보와 추천 곡 간 유사도를 기반으로 추천 결과를 정렬</li>
+      <li>사용자의 상황에 따라 두 가지 방식 중 하나를 선택하여 플레이리스트 정보를 등록할 수 있도록 구성</li>
     </ul>
   </li>
 </ul>
