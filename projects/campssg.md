@@ -70,7 +70,7 @@ related: true
 
 ## 주요 기능 상세 설명
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/campssg_function_search.png" alt="캠핑장 위치 기반 마트 조회" style="width: 100%; height: auto;">
@@ -110,7 +110,7 @@ related: true
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 500px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_cart.png" alt="마트 상품 목록" style="width: 100%; height: auto;">
@@ -154,7 +154,7 @@ related: true
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_price.png" alt="상품 상품 가격 비교 예시" style="width: 100%; height: auto;">
@@ -195,7 +195,7 @@ related: true
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 500px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/campssg_function_product.png" alt="상품 리스트 등록" style="width: 100%; height: auto;">
@@ -236,7 +236,7 @@ related: true
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/campssg_function_order.png" alt="상품 등록 예시" style="width: 100%; height: auto;">
@@ -278,7 +278,7 @@ related: true
 </div>
 
 ## 개발 과정에서의 어려움 및 문제 해결 과정
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; align-items: center;">
     <img src="/assets/images/campssg_problem1.png" alt="장바구니 마트 정보 충돌 시 알림창" style="width: 100%; height: auto;">
@@ -308,7 +308,7 @@ related: true
   </div>
 </div>
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; align-items: center;">
     <img src="/assets/images/campssg_problem2.png" alt="장바구니 상품 가격 비교 기능 최적화" style="width: 100%; height: auto;">
