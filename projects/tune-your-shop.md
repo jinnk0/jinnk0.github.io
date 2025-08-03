@@ -86,7 +86,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ## 주요 기능 상세 설명
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/tune-your-shop_function_login.png" alt="Spotify OAuth 로그인" style="width: 100%; height: auto;">
@@ -129,7 +129,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/tune-your-shop_function_onboarding.png" alt="Onboarding 시스템" style="width: 100%; height: auto;">
@@ -185,7 +185,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 </ul>
 
 <!-- 방법 1: Spotify 연동 -->
-<div style="display: flex; gap: 32px; margin: 2em 0;">
+<div class="function-container">
   <!-- 좌측: 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/tune-your-shop_function_playlist.png" alt="Spotify 플레이리스트 연동 예시" style="width: 100%; height: auto;">
@@ -213,7 +213,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 </div>
 
 <!-- 방법 2: 이미지 OCR 업로드 -->
-<div style="display: flex; gap: 32px; margin: 2em 0;">
+<div class="function-container">
   <!-- 좌측: 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/tune-your-shop_function_ocr.png" alt="OCR 이미지 업로드 예시" style="width: 100%; height: auto;">
@@ -254,7 +254,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
 
 ---
 
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px;">
     <img src="/assets/images/tune-your-shop_function_recommendation.png" alt="추천 결과 반환 예시" style="width: 100%; height: auto;">
@@ -316,7 +316,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
     - 사용자 편의성을 증대하고 유연한 서비스 경험 제공
 
 ## 개발 과정에서의 어려움 및 문제 해결 과정
-<div style="display: flex; gap: 32px; margin-top: 1.5em; margin-bottom: 2em;">
+<div class="function-container">
   <!-- 좌측 이미지 -->
   <div style="flex: 0 0 300px; display: flex; align-items: center;">
     <img src="/assets/images/tune-your-shop_problem2.png" alt="응답 시간 단축 표" style="width: 100%; height: auto;">
@@ -350,7 +350,7 @@ AI를 활용해 자영업자의 반복적인 음악 선곡 업무를 자동화�
   </div>
 </div>
 
-<div style="display: flex; gap: 32px; margin: 2em 0;">
+<div class="function-container">
   <!-- 좌측: 이미지 2개 세로 배치 -->
   <div style="flex: 0 0 300px; display: flex; flex-direction: column; gap: 16px;">
     <img src="/assets/images/tune-your-shop_problem1.png" alt="생략되는 긴 문자열 예시" style="width: 100%; height: auto;">
